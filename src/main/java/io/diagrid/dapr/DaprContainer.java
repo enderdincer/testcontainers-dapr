@@ -251,7 +251,7 @@ public class DaprContainer extends GenericContainer<DaprContainer> {
       Map<String, Object> spec = (Map<String, Object>) component.get("spec");
       String version = (String) spec.get("version");
       List<Map<String, Object>> specMetadata =
-          (List<Map<String, Object>>) spec.getOrDefault("metadata", Arrays.asList(Collections.emptyMap()));
+          (List<Map<String, Object>>) spec.getOrDefault("metadata", Collections.emptyList());
 
       ArrayList<MetadataEntry> metadataEntries = new ArrayList<>();
 
